@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Moda Elegante</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+
+        <header class="header-menu">
+            <h1 class="logo">Elegance</h1>
+            <p>La moda que se adapta a ti</p>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+            </div>
+        </header>
+
+        <div class="menu-container">
+            <div class="category-carousel-container">
+                <div id="category-carousel" class="category-carousel">
+                    </div>
+            </div>
+        </div>
+
+        <main class="menu-container">
+            
+            <section id="filtered-section" class="menu-section" style="display: none;">
+                <h2 id="search-results-title" class="section-title">Productos</h2>
+                <div id="no-products-message" class="empty-cart-msg" style="display: none;">
+                    No se encontraron productos que coincidan con tu búsqueda.
+                </div>
+                <div id="all-filtered-products" class="product-grid">
+                    </div>
+            </section>
+            
+            <section id="featured-section" class="menu-section">
+                <h2 class="section-title">✨ Destacados ✨</h2>
+                <div id="featured-grid" class="product-grid">
+                    </div>
+            </section>
+            
+            <section id="offers-section" class="menu-section">
+                <h2 class="section-title">🔥 Ofertas</h2>
+                <div id="offers-grid" class="product-grid offer-grid">
+                    </div>
+            </section>
+        </main>
+        
+        <button id="cart-btn" class="floating-cart-btn">
+            🛒 <span id="cart-badge" class="cart-badge">0</span> Carrito
+        </button>
+
+        <div id="imageModal" class="modal">
+            <span class="close-button">&times;</span>
+            <div class="modal-content-wrapper">
+                
+                <div class="carousel-container">
+                    <button id="prev-btn" class="carousel-btn prev-btn">←</button>
+                    <div id="carousel-images-container" class="carousel-images-container">
+                        </div>
+                    <button id="next-btn" class="carousel-btn next-btn">→</button>
+                </div>
+
+                <div id="image-modal-caption">
+                    <p id="selection-prompt">¡Selecciona una talla y un color para continuar!</p>
+                    <div id="modal-product-details">
+                        <h4 id="modal-product-name"></h4>
+                        <p id="modal-product-description"></p>
+                        <p id="modal-product-price"></p>
+                    </div>
+
+                    <div id="product-options-container">
+                        <div id="size-group" class="options-group needs-selection">
+                            <h3 class="options-title">Talla:</h3>
+                            <div id="size-options" class="product-options"></div>
+                        </div>
+                        <div id="color-group" class="options-group needs-selection">
+                            <h3 class="options-title">Color:</h3>
+                            <div id="color-options" class="product-options"></div>
+                        </div>
+                    </div>
+                    
+                    <button id="modal-add-to-cart-btn" class="add-to-cart-btn" disabled>Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="cartModal" class="modal">
+            <div class="cart-modal-content">
+                <span class="close-cart-btn">&times;</span>
+                <h3>Tu Carrito</h3>
+                <div id="cart-items"></div>
+                <div class="cart-summary">
+                    <strong>Total: $<span id="cart-total">0</span></strong>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Finalizar Compra por WhatsApp</button>
+            </div>
+        </div>
+
+        <footer class="footer-menu">
+            <p>&copy; 2025 Tienda de Moda Elegante. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
