@@ -5,6 +5,7 @@ const urlsToCache = [
     '/styles.css',
     '/app.js',
     '/data.js',
+    '/favicon.png',
     '/img/bolso-piel.jpg',
     '/img/camisa-lino.jpg',
     '/img/chaqueta-cuero.jpg',
@@ -15,22 +16,26 @@ const urlsToCache = [
     '/img/tenis-urbanos.jpg',
     '/img/vestido-floral.jpg',
     '/img/zapatos-tacon.jpg',
-    '/favicon.png',
-    // Puedes añadir las demás imágenes aquí
+    // Rutas para las imágenes adicionales de los carruseles
+    '/img/vestido-floral-1.jpg',
+    '/img/vestido-floral-2.jpg',
+    '/img/vestido-floral-3.jpg',
+    '/img/chaqueta-cuero-1.jpg',
+    '/img/chaqueta-cuero-2.jpg',
+    '/img/pants-deportivos-1.jpg',
+    '/img/bolso-piel-1.jpg'
 ];
 
-// Instala el Service Worker y cachea los archivos
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
-                console.log('Cacheando archivos estáticos');
+                console.log('Cacheando archivos estáticos...');
                 return cache.addAll(urlsToCache);
             })
     );
 });
 
-// Activa el Service Worker y borra cachés antiguas
 self.addEventListener('activate', event => {
     const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
@@ -46,16 +51,13 @@ self.addEventListener('activate', event => {
     );
 });
 
-// Intercepta las peticiones de red y sirve desde la caché si está disponible
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
             .then(response => {
-                // Si el archivo está en caché, lo devuelve
                 if (response) {
                     return response;
                 }
-                // Si no, lo busca en la red
                 return fetch(event.request);
             })
     );

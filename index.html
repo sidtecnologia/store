@@ -6,17 +6,7 @@
     <title>Tienda de Moda Elegante</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#8d8d8d"/>
-
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('Service Worker registrado con éxito'))
-                .catch(err => console.log('Error al registrar el Service Worker:', err));
-        });
-    }
-</script>
+    <meta name="theme-color" content="#8d8d8d"/>
 </head>
 <body>
     <div class="page-container">
@@ -32,7 +22,7 @@
         <div class="menu-container">
             <div class="category-carousel-container">
                 <div id="category-carousel" class="category-carousel">
-                    </div>
+                </div>
             </div>
         </div>
 
@@ -44,19 +34,19 @@
                     No se encontraron productos que coincidan con tu búsqueda.
                 </div>
                 <div id="all-filtered-products" class="product-grid">
-                    </div>
+                </div>
             </section>
             
             <section id="featured-section" class="menu-section">
                 <h2 class="section-title">✨ Destacados ✨</h2>
                 <div id="featured-grid" class="product-grid">
-                    </div>
+                </div>
             </section>
             
             <section id="offers-section" class="menu-section">
                 <h2 class="section-title">🔥 Ofertas</h2>
                 <div id="offers-grid" class="product-grid offer-grid">
-                    </div>
+                </div>
             </section>
         </main>
         
@@ -71,7 +61,7 @@
                 <div class="carousel-container">
                     <button id="prev-btn" class="carousel-btn prev-btn">←</button>
                     <div id="carousel-images-container" class="carousel-images-container">
-                        </div>
+                    </div>
                     <button id="next-btn" class="carousel-btn next-btn">→</button>
                 </div>
 
@@ -116,7 +106,25 @@
         </footer>
     </div>
     
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registrado con éxito'))
+                    .catch(err => console.log('Error al registrar el Service Worker:', err));
+            });
+        }
+    </script>
+    
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
+
+    <div id="install-banner" class="install-banner">
+        <span class="install-banner-text">¡Añade ELEGANCE a tu pantalla de inicio!</span>
+        <div class="install-banner-buttons">
+            <button id="install-close-btn">No, gracias</button>
+            <button id="install-prompt-btn" class="install-btn">Instalar</button>
+        </div>
+    </div>
 </body>
 </html>
