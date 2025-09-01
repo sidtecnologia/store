@@ -2,9 +2,9 @@ const CACHE_NAME = 'elegance-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/styles.css',
-    '/app.js',
-    '/data.js',
+    '/css/styles.css',
+    '/js/app.js',
+    '/js/data.js',
     '/favicon.png',
     '/img/bolso-piel.jpg',
     '/img/camisa-lino.jpg',
@@ -16,7 +16,6 @@ const urlsToCache = [
     '/img/tenis-urbanos.jpg',
     '/img/vestido-floral.jpg',
     '/img/zapatos-tacon.jpg',
-    // Rutas para las imágenes adicionales de los carruseles
     '/img/vestido-floral-1.jpg',
     '/img/vestido-floral-2.jpg',
     '/img/vestido-floral-3.jpg',

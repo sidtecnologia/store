@@ -106,7 +106,7 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -158,7 +158,7 @@ body {
 }
 
 .product-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
     color: var(--primary-color);
 }
@@ -627,4 +627,8 @@ body {
     background-color: var(--accent-color);
     color: var(--primary-color);
     border-color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+    /* La regla de product-grid se eliminó aquí ya que ahora se define globalmente */
 }
