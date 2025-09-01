@@ -89,8 +89,9 @@ const productData = [
         description: "Bolso elegante y espacioso, perfecto para complementar tu atuendo diario.",
         price: 150.00,
         image: [
-            "img/bolso-piel.jpg",
-            "img/bolso-piel-1.jpg",
+            "img/accesorios/bolso-piel.webp",
+            "img/accesorios/bolso-piel-1.webp",
+            "img/accesorios/bolso-piel-2.jpg",
         ],
         category: "Accesorios",
         gender: "mujer",
@@ -107,39 +108,42 @@ const productData = [
         id: "prod-6",
         name: "Gorra Clásica de Béisbol",
         description: "Gorra de béisbol de estilo atemporal, ideal para cualquier look casual.",
-        price: 25.00,
+        price: 35.000,
         image: [
-            "img/gorra-clasica.jpg",
+            "img/accesorios/gorra-clasica.webp",
+            "img/accesorios/gorra-clasica-1.webp",
+            "img/accesorios/gorra-clasica-2.webp",
         ],
         category: "Accesorios",
         gender: "unisex",
         isOffer: true,
         featured: false,
         sizes: ["Ajustable"],
-        colors: ["Negro", "Azul", "Verde"],
+        colors: ["Negro", "Beige", "Blanco"],
         stock: {
-            "Negro_Ajustable": 10,
-            "Azul_Ajustable": 5,
-            "Verde_Ajustable": 0
+            "Negro_Ajustable": 3,
+            "Beige_Ajustable": 5,
+            "Blanco_Ajustable": 0
         }
     },
     {
         id: "prod-7",
         name: "Sudadera con Capucha",
         description: "Sudadera cómoda y suave, ideal para un estilo casual y relajado.",
-        price: 60.00,
+        price: 60.000,
         image: [
-            "img/sudadera.jpg",
+            "img/ropa/unisex/sudadera.webp",
+            "img/ropa/unisex/sudadera-1.webp",
+            "img/ropa/unisex/sudadera-2.webp",
         ],
         category: "ropa",
         gender: "unisex",
         isOffer: false,
         featured: false,
         sizes: ["S", "M", "L", "XL"],
-        colors: ["Gris", "Azul"],
+        colors: ["Blanco"],
         stock: {
-            "Gris_S": 7, "Gris_M": 10, "Gris_L": 8, "Gris_XL": 6,
-            "Azul_S": 5, "Azul_M": 9, "Azul_L": 6, "Azul_XL": 3
+            "Blanco_S": 7, "Blanco_M": 10, "Blanco_L": 8, "Blanco_XL": 6,
         }
     },
     {
@@ -186,17 +190,18 @@ const productData = [
         description: "Jeans de corte ajustado y tela elástica para máxima comodidad y estilo.",
         price: 80.00,
         image: [
-            "img/jeans.jpg",
+            "img/ropa/mujer/jeans-ajustados.webp",
+            "img/ropa/mujer/jeans-ajustados-1.webp",
+            "img/ropa/mujer/jeans-ajustados-2.webp",
         ],
         category: "ropa",
-        gender: "unisex",
+        gender: "mujer",
         isOffer: true,
         featured: false,
         sizes: ["28", "30", "32", "34", "36"],
-        colors: ["Azul", "Negro"],
+        colors: ["Azul"],
         stock: {
             "Azul_28": 3, "Azul_30": 8, "Azul_32": 10, "Azul_34": 7, "Azul_36": 4,
-            "Negro_28": 1, "Negro_30": 5, "Negro_32": 7, "Negro_34": 5, "Negro_36": 2
         }
     }
 ];

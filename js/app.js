@@ -82,14 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Lista de filtros personalizados para el carrusel
     const carouselFilters = [
-        { label: 'Niños', image: 'img/chaqueta-cuero.jpg', filterKey: 'gender', filterValue: 'niños' },
-        { label: 'Hombre', image: 'img/chaqueta-cuero.jpg', filterKey: 'gender', filterValue: 'hombre' },
-        { label: 'Mujer', image: 'img/vestido-floral.jpg', filterKey: 'gender', filterValue: 'mujer' },
-        { label: 'Ropa', image: 'img/tenis-deportivos.jpg', filterKey: 'category', filterValue: 'ropa' },
-        { label: 'Zapatos', image: 'img/tenis-deportivos.jpg', filterKey: 'category', filterValue: 'zapatos' },
-        { label: 'Deportivo', image: 'img/tenis-deportivos.jpg', filterKey: 'style', filterValue: 'deportivo' },
-        { label: 'Accesorios', image: 'img/bolso-piel.jpg', filterKey: 'category', filterValue: 'accesorios' },
-        { label: 'Ofertas', image: 'img/gorra-clasica.jpg', filterKey: 'isOffer', filterValue: true },
+        { label: 'Niño', image: 'img/niños.webp', filterKey: 'gender', filterValue: 'niños' },
+        { label: 'Hombre', image: 'img/hombres.webp', filterKey: 'gender', filterValue: 'hombre' },
+        { label: 'Mujer', image: 'img/mujeres.webp', filterKey: 'gender', filterValue: 'mujer' },
+        { label: 'Ropa', image: 'img/vestuario.webp', filterKey: 'category', filterValue: 'ropa' },
+        { label: 'Zapatos', image: 'img/zapato.webp', filterKey: 'category', filterValue: 'zapatos' },
+        { label: 'Deportivo', image: 'img/deportivo.webp', filterKey: 'style', filterValue: 'deportivo' },
+        { label: 'Accesorios', image: 'img/accesorio.webp', filterKey: 'category', filterValue: 'accesorios' },
+        { label: 'Ofertas', image: 'img/oferta.webp', filterKey: 'isOffer', filterValue: true },
     ];
 
     const generateCategoryCarousel = () => {
