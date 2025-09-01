@@ -1,0 +1,21 @@
+{
+    "short_name": "ELEGANCE",
+    "name": "ELEGANCE",
+    "icons":
+    [
+        {
+            "src": "favicon.png",
+            "type": "img/png",
+            "sizes": "350x350"
+        },
+        {
+            "src": "favicon.png",
+            "type": "img/png",
+            "sizes": "712x712"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#8d8d8d"
+}
