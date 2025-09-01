@@ -484,6 +484,81 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCart();
         }
     };
+
+    // ... (el resto de tu código JS)
+
+// --- Lógica de Banner de Instalación para PWA ---
+const installBanner = document.getElementById('install-banner');
+const installCloseBtn = document.getElementById('install-close-btn');
+const installPromptBtn = document.getElementById('install-prompt-btn');
+let deferredPrompt; // Variable para almacenar el evento de instalación
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Evita que el navegador muestre su propio mensaje de instalación
+    e.preventDefault();
+    // Almacena el evento para poder dispararlo más tarde
+    deferredPrompt = e;
+    // Muestra el banner de instalación personalizado
+    installBanner.classList.add('visible');
+});
+
+installPromptBtn.addEventListener('click', (e) => {
+    if (deferredPrompt) {
+        // Oculta el banner
+        installBanner.classList.remove('visible');
+        // Muestra el mensaje de instalación del navegador
+        deferredPrompt.prompt();
+        // Resetea la variable
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('El usuario aceptó la instalación de la PWA');
+            } else {
+                console.log('El usuario rechazó la instalación de la PWA');
+            }
+            deferredPrompt = null;
+        });
+    }
+});
+
+installCloseBtn.addEventListener('click', () => {
+    installBanner.classList.remove('visible');
+});
+
+// Asegúrate de que este bloque de código está dentro del listener DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    // ... todas tus variables y funciones...
+    
+    // Pega el bloque de código de la PWA aquí
+    const installBanner = document.getElementById('install-banner');
+    const installCloseBtn = document.getElementById('install-close-btn');
+    const installPromptBtn = document.getElementById('install-prompt-btn');
+    let deferredPrompt; 
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBanner.classList.add('visible');
+    });
+
+    installPromptBtn.addEventListener('click', (e) => {
+        if (deferredPrompt) {
+            installBanner.classList.remove('visible');
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('El usuario aceptó la instalación de la PWA');
+                } else {
+                    console.log('El usuario rechazó la instalación de la PWA');
+                }
+                deferredPrompt = null;
+            });
+        }
+    });
+
+    installCloseBtn.addEventListener('click', () => {
+        installBanner.classList.remove('visible');
+    });
+});
     
     checkoutBtn.addEventListener('click', () => {
         if (cart.length === 0) {
@@ -513,3 +588,4 @@ document.addEventListener('DOMContentLoaded', () => {
     generateCategoryCarousel();
     updateCart();
 });
+

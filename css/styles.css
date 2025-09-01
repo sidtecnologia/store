@@ -323,6 +323,7 @@ body {
 }
 
 #image-modal-caption {
+    margin-bottom: 3rem;
     background-color: #fff;
     color: var(--text-color);
     padding: 15px;
