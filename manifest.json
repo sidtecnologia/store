@@ -1,8 +1,7 @@
 {
     "short_name": "ELEGANCE",
     "name": "ELEGANCE",
-    "icons":
-    [
+    "icons": [
         {
             "src": "favicon.png",
             "type": "img/png",
