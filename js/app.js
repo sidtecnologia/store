@@ -558,6 +558,17 @@ document.addEventListener('DOMContentLoaded', () => {
     installCloseBtn.addEventListener('click', () => {
         installBanner.classList.remove('visible');
     });
+    // Detectar si ya está instalada la PWA
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+        // Oculta el banner si ya está instalada
+        const installBanner = document.getElementById('install-banner');
+        if (installBanner) {
+            installBanner.style.display = 'none';
+        }
+    }
+});
+
 });
     
     checkoutBtn.addEventListener('click', () => {
