@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#8d8d8d"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
     <div class="page-container">
@@ -59,11 +61,15 @@
             <div class="modal-content-wrapper">
                 
                 <div class="carousel-container">
-                    <button id="prev-btn" class="carousel-btn prev-btn">←</button>
-                    <div id="carousel-images-container" class="carousel-images-container">
-                    </div>
-                    <button id="next-btn" class="carousel-btn next-btn">→</button>
-                </div>
+    <button id="prev-btn" class="carousel-btn prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+    <div id="carousel-images-container" class="carousel-images-container"></div>
+    <button id="next-btn" class="carousel-btn next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+</div>
+
 
                 <div id="image-modal-caption">
                     <p id="selection-prompt">¡Selecciona una talla y un color para continuar!</p>

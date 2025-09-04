@@ -556,14 +556,14 @@ body {
 
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 90%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.4rem;
     z-index: 5;
 }
 
